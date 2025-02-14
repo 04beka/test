@@ -1,0 +1,212 @@
+*  {
+    margin: 0;
+    padding: 0;
+    cursor: url('./icons/chimney-cake.png'), auto;
+}
+header {
+    background-color: #333; 
+    color: white; 
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+.logo img {
+    max-height: 100px; 
+    display: block;
+}
+nav {
+    display: flex;
+    gap: 20px; 
+}
+nav a {
+    color: white; 
+    text-decoration: none;
+    font-size: 1.1em; 
+    font-weight: bold; 
+    transition: .3s;
+}
+nav a:hover {
+    text-decoration: underline; 
+    transform: translateY(10px);
+}
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+.image {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out;
+
+}
+.image:hover {
+    transform: scale(1.05); 
+}
+.image:hover .info {
+    opacity: 1;
+}
+.info h3 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.info p {
+    margin: 5px 0 0;
+    font-size: 1em;
+    line-height: 1.4;
+}
+footer {
+    background-color: #333; 
+    color: #fff; 
+    padding: 20px 0;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+.footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #f4a261;
+}
+.footer-section p {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+    margin-top: 10px;
+}
+.social-links a img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease-in-out;
+}
+.social-links a img:hover {
+    transform: scale(1.2);
+}
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #222;
+    font-size: 0.8em;
+    margin-top: 20px; 
+}
+h1 {
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    height: 200px;          
+    border: 1px solid #070707;
+}
+@media (max-width: 1024px) {
+    .image-gallery {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px; 
+    }
+
+    .footer-container {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center; 
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    .image-gallery {
+        grid-template-columns: repeat(1, 1fr); 
+        gap: 10px;
+    }
+
+    h1 {
+        height: auto; 
+        padding: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    .footer-section {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+}
+@media (max-width: 480px) {
+    .logo img {
+        max-height: 70px; 
+    }
+
+    nav a {
+        font-size: 0.9em; 
+    }
+
+    .footer-section h3 {
+        font-size: 1em; 
+    }
+
+    .social-links a img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .footer-bottom {
+        font-size: 0.7em; 
+    }
+}
